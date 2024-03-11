@@ -1,0 +1,37 @@
+body {
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #EEE;
+}
+
+.buzz {
+    width: 250px;
+    height: fit-content;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+    margin-right: 3rem;
+}
+
+.container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem 2rem;
+}
+
+.title {
+    font-size: 2.6rem;
+    margin: 2rem 2rem;
+}
+
+.text {
+    width: 50%;
+    height: fit-content;
+}
