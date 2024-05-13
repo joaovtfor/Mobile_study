@@ -1,0 +1,31 @@
+#logo {
+    width: 10rem;
+    object-fit: contain;
+    aspect-ratio: 16/9;
+}
+
+main {
+    padding: 5rem 3rem;
+}
+
+footer, nav {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+#login {
+    background-color: #005596;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+#login:hover {
+    background-color: #1279c7;
+}
+
+#li, #login {
+    width: fit-content;
+    padding-inline: 1rem;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2rem;
+}
