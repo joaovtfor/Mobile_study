@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Novo Cadastro</ion-title>
+    <ion-button color="primary" (click)="close()" slot="end" style="margin-right: 10px;">
+      <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nome:</ion-label>
+    <ion-input [(ngModel)]="task.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Idade:</ion-label>
+    <ion-input [(ngModel)]="task.age"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Endereço:</ion-label>
+    <ion-input [(ngModel)]="task.address"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Cidade:</ion-label>
+    <ion-input [(ngModel)]="task.city"></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-button expand="block" (click)="close()">Salvar</ion-button>
+</ion-content>
+
+
