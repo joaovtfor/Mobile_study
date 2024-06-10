@@ -12,9 +12,9 @@ export class HomePage {
 
   tasks = [
     {id: 1, name: 'John Travolta', age: 21, city: 'São Borja', address: 'Rua teste 1'},
-    {id: 1, name: 'John Smith', age: 19, city: 'Carazinho', address: 'Rua teste 2'},
-    {id: 1, name: 'John Lennon', age: 99, city: 'Passo Fundo', address: 'Rua teste 3'},
-    {id: 1, name: 'John Senna', age: 30, city: 'Marau', address: 'Rua teste 4'},
+    {id: 2, name: 'John Smith', age: 19, city: 'Carazinho', address: 'Rua teste 2'},
+    {id: 3, name: 'John Lennon', age: 99, city: 'Passo Fundo', address: 'Rua teste 3'},
+    {id: 4, name: 'John Senna', age: 30, city: 'Marau', address: 'Rua teste 4'},
   ]
 
   constructor(
@@ -30,10 +30,14 @@ export class HomePage {
     await modal.present();
     const newTask = await modal.onDidDismiss();
     console.log(newTask.data);
-    if (newTask.data.description !+ '' ) {
+    if (newTask.data.description != '' ) {
       this.tasks.push(newTask.data);
     };
     console.log(this.tasks);
+  }
+
+  async delete(id: number) {
+    this.tasks = this.tasks.filter(item => item.id != id);
   }
 
 }
