@@ -1,12 +1,15 @@
 package br.upf.calculator
 
 import android.os.Bundle
+import android.widget.GridLayout.Alignment
+import android.widget.LinearLayout
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -21,6 +24,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.upf.calculator.ui.theme.CalculatorTheme
@@ -109,6 +113,7 @@ fun Display(displayText: String) {
     Text(
         text = displayText,
         style = MaterialTheme.typography.headlineLarge,
+        textAlign = TextAlign.Center,
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp)
@@ -123,7 +128,12 @@ fun Teclado(onButtonClick: (String) -> Unit) {
         listOf("1", "2", "3", "-"),
         listOf("0", ".", "=", "+")
     )
-    Column {
+
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.SpaceBetween,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         for (linha in botoes) {
             Row(modifier = Modifier.padding(8.dp)) {
                 for (botao in linha) {
