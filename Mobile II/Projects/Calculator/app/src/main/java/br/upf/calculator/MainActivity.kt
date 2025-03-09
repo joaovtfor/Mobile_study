@@ -151,7 +151,7 @@ fun Botao(texto: String, onClick: (String) -> Unit) {
         modifier = Modifier
             .size(80.dp)
             .padding(4.dp)
-    ) {
+    ) { 
         Text(
             text = texto,
             style = MaterialTheme.typography.titleLarge
